@@ -8,8 +8,8 @@
 
     <ImageButton
         android:id="@+id/exit_imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,11 +33,10 @@
         app:layout_constraintVertical_bias="0.038" />
 
     <TextView
-        android:id="@+id/dichsangtv"
+        android:id="@+id/ChonBanDich"
         android:layout_width="297dp"
         android:layout_height="53dp"
-        android:fontFamily="sans-serif"
-        android:text="Hãy dịch &quot;Quả bóng&quot; "
+        android:text="Chọn đáp án đúng"
         android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
@@ -48,31 +47,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.171" />
 
-    <ImageView
-        android:id="@+id/bongcuoi"
-        android:layout_width="222dp"
-        android:layout_height="412dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="223dp"
+        android:layout_height="31dp"
+        android:text="Where is footballer?"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269"
-        app:srcCompat="@drawable/quabong" />
-
-    <EditText
-        android:id="@+id/edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:textColor="#111"
-        android:hint="Nhập vào bằng tiếng Anh"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.24" />
 
     <Button
         android:id="@+id/buttonKiemtra"
@@ -105,8 +91,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="413dp"
-        android:layout_height="149dp"
+        android:layout_width="411dp"
+        android:layout_height="146dp"
         android:background="@drawable/dung"
         android:fontFamily="serif"
         android:paddingLeft="20dp"
@@ -126,14 +112,14 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="182dp"
+        android:layout_height="146dp"
         android:background="@drawable/sai"
-        android:fontFamily="sans-serif"
         android:paddingLeft="20dp"
-        android:paddingTop="25dp"
-        android:text="Đáp án đúng:\n &quot;ball&quot;  "
+        android:paddingTop="15dp"
+        android:text="SAI RỒI"
         android:textColor="#F61100"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,6 +127,62 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="157dp"
+        android:layout_height="131dp"
+        android:background="@drawable/bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/thu" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="157dp"
+        android:layout_height="131dp"
+        android:background="@drawable/bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/maradona" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="157dp"
+        android:layout_height="131dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718"
+        app:srcCompat="@drawable/puth" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="157dp"
+        android:layout_height="131dp"
+        android:background="@drawable/bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718"
+        app:srcCompat="@drawable/trump" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

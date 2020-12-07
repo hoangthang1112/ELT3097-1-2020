@@ -2,22 +2,16 @@ package com.hoangthang.duolingo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.SpannableString;
-import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -122,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         btnNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity00.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity0.class);
                 startActivity(intent);
             }
         });

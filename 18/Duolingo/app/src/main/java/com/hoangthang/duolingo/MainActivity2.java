@@ -110,7 +110,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity00.class);
+                Intent intent = new Intent(MainActivity2.this, MainActivity0.class);
                 startActivity(intent);
             }
         });
@@ -118,7 +118,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnTiepTuc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity4.class);
+                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
                 intent.putExtra("prb",pbChay.getProgress());
                 startActivity(intent);
             }

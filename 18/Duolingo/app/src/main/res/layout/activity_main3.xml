@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".MainActivity3">
 
     <ImageButton
         android:id="@+id/exit_imageButton"
-        android:layout_width="49dp"
-        android:layout_height="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +33,11 @@
         app:layout_constraintVertical_bias="0.038" />
 
     <TextView
-        android:id="@+id/ChonBanDich"
-        android:layout_width="339dp"
-        android:layout_height="79dp"
-        android:text="Viết lại câu trong đoạn ghi âm dưới đây"
+        android:id="@+id/dichsangtv"
+        android:layout_width="297dp"
+        android:layout_height="53dp"
+        android:fontFamily="sans-serif"
+        android:text="Hãy dịch &quot;Quả bóng&quot; "
         android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
@@ -47,32 +48,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.171" />
 
-    <ImageButton
-        android:id="@+id/btnPlay"
-        android:layout_width="82dp"
-        android:layout_height="69dp"
-        android:background="@drawable/bg"
+    <ImageView
+        android:id="@+id/bongcuoi"
+        android:layout_width="222dp"
+        android:layout_height="412dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        app:layout_constraintVertical_bias="0.269"
+        app:srcCompat="@drawable/quabong" />
 
     <EditText
         android:id="@+id/edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nhập vào bằng tiếng Anh"
         android:inputType="text"
         android:textColor="#111"
+        android:hint="Nhập vào bằng tiếng Anh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.638" />
+
     <Button
         android:id="@+id/buttonKiemtra"
         android:layout_width="370dp"
@@ -130,7 +131,7 @@
         android:fontFamily="sans-serif"
         android:paddingLeft="20dp"
         android:paddingTop="25dp"
-        android:text="Đáp án đúng:\n &quot;amazing good job bro&quot;  "
+        android:text="Đáp án đúng:\n &quot;ball&quot;  "
         android:textColor="#F61100"
         android:textSize="25sp"
         android:visibility="invisible"
@@ -142,3 +143,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

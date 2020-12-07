@@ -3,96 +3,50 @@ package com.hoangthang.duolingo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class MainActivity5 extends AppCompatActivity {
+public class MainActivity5 extends AppCompatActivity implements View.OnClickListener {
 
     Button btnKiemtra;
     Button btnTiepTuc;
     ProgressBar pbChay;
-    int choose =0;
     TextView textView2;
     TextView textView3;
     ImageButton btnNhan;
-    ImageButton button;
-    ImageButton button2;
-    ImageButton button3;
-    ImageButton button4;
+    EditText editText;
+    ImageButton btnPlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
 
-        btnKiemtra = (Button) findViewById(R.id.buttonKiemtra);
-        textView2 = (TextView) findViewById(R.id.textView2);
-        textView3 = (TextView) findViewById(R.id.textView3);
         pbChay = (ProgressBar) findViewById(R.id.progressBar);
         btnTiepTuc = (Button) findViewById(R.id.buttonTiepTuc);
         btnNhan = (ImageButton) findViewById(R.id.exit_imageButton);
-        button = (ImageButton) findViewById(R.id.imageButton);
-        button2 = (ImageButton) findViewById(R.id.imageButton2);
-        button3 = (ImageButton) findViewById(R.id.imageButton3);
-        button4 = (ImageButton) findViewById(R.id.imageButton4);
+        btnKiemtra = (Button) findViewById(R.id.buttonKiemtra);
+        editText = (EditText) findViewById(R.id.edittext);
+        textView2 = (TextView) findViewById(R.id.textView2);
+        textView3 = (TextView) findViewById(R.id.textView3);
+        btnPlay = (ImageButton)findViewById(R.id.btnPlay);
 
         Intent intent = getIntent();
         final int ketqua = intent.getIntExtra("prb", 111);
         pbChay.setProgress(ketqua);
-
-        button.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnKiemtra.setBackgroundResource(R.drawable.blue);
-                choose=1;
-                textView2.setVisibility(View.INVISIBLE);
-                textView3.setVisibility(View.INVISIBLE);
-            }
-        }));
-
-        button2.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnKiemtra.setBackgroundResource(R.drawable.blue);
-                choose=2;
-                textView2.setVisibility(View.INVISIBLE);
-                textView3.setVisibility(View.INVISIBLE);
-            }
-        }));
-
-        button3.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnKiemtra.setBackgroundResource(R.drawable.blue);
-                choose=3;
-                textView2.setVisibility(View.INVISIBLE);
-                textView3.setVisibility(View.INVISIBLE);
-            }
-        }));
-
-        button4.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnKiemtra.setBackgroundResource(R.drawable.blue);
-                choose=4;
-                textView2.setVisibility(View.INVISIBLE);
-                textView3.setVisibility(View.INVISIBLE);
-            }
-        }));
+        
 
         btnKiemtra.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                button.setEnabled(false);
-                button2.setEnabled(false);
-                button3.setEnabled(false);
-                button4.setEnabled(false);
-                btnKiemtra.setBackgroundResource(R.drawable.blue);
-                if (choose==2){
+            public void onClick(View view) {
+                String noiDung = editText.getText().toString();
+                if(noiDung.equals("amazing good job bro")) {
                     textView2.setVisibility(View.VISIBLE);
                     textView3.setVisibility(View.INVISIBLE);
                     btnKiemtra.setVisibility(View.INVISIBLE);
@@ -104,27 +58,40 @@ public class MainActivity5 extends AppCompatActivity {
                     textView2.setVisibility(View.INVISIBLE);
                     btnKiemtra.setVisibility(View.INVISIBLE);
                     btnTiepTuc.setVisibility(View.VISIBLE);
-
                 }
-            }
-        });
-
-        btnNhan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity5.this, MainActivity00.class);
-                startActivity(intent);
             }
         });
 
         btnTiepTuc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity5.this, MainActivity00.class);
+                Intent intent = new Intent(MainActivity5.this, MainActivity0.class);
                 intent.putExtra("prb",pbChay.getProgress());
                 startActivity(intent);
             }
         });
 
+        btnNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity5.this, MainActivity0.class);
+                startActivity(intent);
+            }
+        });
+
+        btnPlay.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnPlay:
+                MediaPlayer player = MediaPlayer.create(this, R.raw.amthanh);
+                player.start();
+                break;
+            default:
+                break;
+        }
     }
 }
