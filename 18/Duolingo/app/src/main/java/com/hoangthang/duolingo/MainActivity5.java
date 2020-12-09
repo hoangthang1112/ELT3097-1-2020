@@ -65,7 +65,7 @@ public class MainActivity5 extends AppCompatActivity implements View.OnClickList
         btnTiepTuc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity5.this, MainActivity0.class);
+                Intent intent = new Intent(MainActivity5.this, MainActivity00.class);
                 intent.putExtra("prb",pbChay.getProgress());
                 startActivity(intent);
             }

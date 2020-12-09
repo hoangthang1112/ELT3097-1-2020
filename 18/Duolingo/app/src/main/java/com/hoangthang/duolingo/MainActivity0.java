@@ -19,7 +19,7 @@ public class MainActivity0 extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextScreen = new Intent(MainActivity0.this, MainActivity.class);
+                Intent nextScreen = new Intent(MainActivity0.this, MainActivity01.class);
 
                 startActivity(nextScreen);
             }
